@@ -1,34 +1,45 @@
 {
-    "name": "petschko/dhl-php-sdk",
-    "description": "DHL SDK",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Peter Dragicevic",
-            "email": "peter@petschko.org",
-            "homepage": "http://petschko.org/",
-            "role": "developer"
-        }
-    ],
-    "support": {
-        "email": "peter@petschko.org",
-        "issues": "https://github.com/Petschko/dhl-php-sdk/issues",
-        "source": "https://github.com/Petschko/dhl-php-sdk",
-        "docs": "http://docs.petschko.org/dhl-php-sdk/index.html"
+  "name": "octlabs/dhl-php-sdk",
+  "description": "DHL BusinessCustomerShipping API SDK",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "role": "initiator",
+      "name": "Peter Dragicevic",
+      "homepage": "https://petschko.org"
     },
-    "require": {
-        "php": ">=7.2.0",
-        "ext-soap": "*",
-        "ext-mbstring": "*"
+    {
+      "role": "developer",
+      "name": "Stefan Rieger",
+      "homepage": "https://october-labs.de"
     },
-    "autoload": {
-        "psr-4": {
-            "Petschko\\DHL\\": "includes/"
-        }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^6.5",
-        "vlucas/phpdotenv": "^2.4"
+    {
+      "role": "developer",
+      "name": "Marcus Förster",
+      "homepage": "https://xerc.de"
     }
+  ],
+  "support": {
+    "issues": "https://github.com/octlabs/dhl-php-sdk/issues",
+    "source": "https://github.com/octlabs/dhl-php-sdk"
+  },
+  "require": {
+    "php": ">=7.2",
+    "ext-soap": "*",
+    "ext-mbstring": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5",
+    "vlucas/phpdotenv": "^2.4"
+  },
+  "replace": {
+    "petschko/dhl-php-sdk": "*",
+    "octlabs/dhl-php-sdk": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "Petschko\\DHL\\": "includes/"
+    }
+  }
 }

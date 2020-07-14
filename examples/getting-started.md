@@ -1,9 +1,9 @@
 # Getting started
 
 ## Install the Project
-- **With** [Composer](https://getcomposer.org/): `composer require petschko/dhl-php-sdk`
+- **With** [Composer](https://getcomposer.org/): `composer require octlabs/dhl-php-sdk`
 
-- **Without** Composer: [Download the newest Version](https://github.com/Petschko/dhl-php-sdk/releases) and put it manually to your Project
+- **Without** Composer: [Download the newest Version](https://github.com/octlabs/dhl-php-sdk/releases) and put it manually to your Project
 
 ## Include the Project
 
@@ -23,7 +23,7 @@ That's it, now you can start to do all the Configuration for you DHL-Logic (Expl
 
 ## Usage
 
-_This is just a very basic Tutorial how you can use the DHL-PHP-SDK, I will add more tutorials & examples to the [example](https://github.com/Petschko/dhl-php-sdk/tree/master/examples) to the directory._
+_This is just a very basic Tutorial how you can use the DHL-PHP-SDK, I will add more tutorials & examples to the [example](https://github.com/octlabs/dhl-php-sdk/tree/master/examples) to the directory._
 
 First you need to setup your DHL-Credentials:
 
@@ -49,7 +49,7 @@ $credentials->setUser('Your-DHL-Account'); // DHL-Account (Same as if you Login 
 $credentials->setSignature('Your-DHL-Account-Password'); // DHL-Account-Password
 $credentials->setEkp('EKP-Account-Number'); // Number of your Account (Provide at least the first 10 digits)
 $credentials->setApiUser('appId'); // Your Applications-ID (You can find it in your DHL-Dev-Account)
-$credentials->setApiPassword('appToken'); // Your Applications-Token (You can find it also where you found the App-Id) 
+$credentials->setApiPassword('appToken'); // Your Applications-Token (You can find it also where you found the App-Id)
 ```
 
 You've set all of the Required Information so far. Now you can Perform several Actions.
@@ -114,7 +114,7 @@ Setup all **Required** Information
 $sender->setName((string) 'Organisation Petschko'); // Can be a Person-Name or Company Name
 
 // You need to seperate the StreetName from the Number and set each one to its own setter
-// Example Full Address: "Oberer Landweg 12a" 
+// Example Full Address: "Oberer Landweg 12a"
 $sender->setStreetName((string) 'Oberer Landweg');
 $sender->setStreetNumber((string) '12a'); // A Number is ALWAYS needed
 
@@ -263,7 +263,7 @@ $shipmentOrder->setSequenceNumber((string) '1'); // Default: '1'
 
 $shipmentOrder->setPrintOnlyIfReceiverIsValid((bool) true); // Only print label on a valid adress - Default: null -> Uses DHL-Default
 
-/* 
+/*
 * You can get the Label as URL or as Base64-Data-String - set it how you want to have it
 * Possible Values:
 * \Petschko\DHL\BusinessShipment::RESPONSE_TYPE_URL = 'URL';
@@ -344,7 +344,7 @@ You can get several Information from the `\Petschko\DHL\Response` Object. Please
 
 ### Update a Shipment
 
-It works the same like creating a Shipment, but you need to specify the Shipment number, you want to update! You call this 
+It works the same like creating a Shipment, but you need to specify the Shipment number, you want to update! You call this
 request via `$dhl->updateShipmentOrder($shipmentNumber)`.
 ```php
 	$dhl->updateShipmentOrder((string) $shipmentNumber)

@@ -54,8 +54,8 @@ $sender->setCity('Hamburg');
 // $sender->setProvince('Province'); // You can set a Province here whenever you need it (since 3.0)
 $sender->setCountry('Germany');
 $sender->setCountryISOCode('DE');
-// $sender->setEmail('peter@petschko.org'); // These are super optional, it will printed on the label, can set under receiver as well
-// $sender->setPhone('015774121861');
+// $sender->setEmail('anna@muster.de'); // These are super optional, it will printed on the label, can set under receiver as well
+// $sender->setPhone('+49123456789');
 // $sender->setContactPerson('Anna Muster');
 
 // Set Receiver
